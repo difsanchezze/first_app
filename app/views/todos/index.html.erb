@@ -1,0 +1,19 @@
+<title>Shared Todo App</title>
+<div class="container">
+	<div class="row">
+		<h1>Shared Todo App</h1>
+      <hr>
+<p>All your todos here</p>
+<%= form_tag("/todos/add", :method=>"post") do %>
+<%= text_field_tag(:todo_text) %>
+<%= submit_tag("Add todo", :class=>"btn") %>
+<% end %>
+
+<div class="well">
+<%@todo_items.each do |t|%>
+<li></ul><%=t.todo_item%></li></ul>
+<%end%>
+</div> <!-- well -->
+    </div> <!-- span4 -->
+  </div> <!-- row -->
+</div> <!-- container -->
